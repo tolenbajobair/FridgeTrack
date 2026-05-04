@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FridgeTrack - Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="brand">
+            <h1>FridgeTrack</h1>
+            <p class="tagline">Track your fridge, save your food.</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact-us.html" class="active">Contact Us</a></li>
+                <li><a href="inventory.html">My Fridge</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+
+            <article class="contact-form-wrapper">
+                <h3>Send Your Inquiry</h3>
+                <p>Please fill out the form below. Fields marked with * are required.</p>
+
+                <form action="process_contact.php" method="post" class="contact-form">
+                    <fieldset>
+                        <legend>Contact Information</legend>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="fname">First Name *</label>
+                                <input type="text" id="fname" name="first_name"
+                                    placeholder="e.g., Shatha"
+                                    pattern="[A-Za-z\s]+"
+                                    title="Please enter letters only"
+                                    autocomplete="given-name" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="lname">Last Name *</label>
+                                <input type="text" id="lname" name="last_name"
+                                    placeholder="e.g., Almuashi"
+                                    pattern="[A-Za-z\s]+"
+                                    title="Please enter letters only"
+                                    autocomplete="family-name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="mobile">Mobile Number *</label>
+                                <input type="tel" id="mobile" name="user_mobile"
+                                    pattern="[0-9]{10}"
+                                    placeholder="05XXXXXXXX"
+                                    title="Please enter exactly 10 digits"
+                                    inputmode="numeric" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="dob">Date of Birth *</label>
+                                <input type="date" id="dob" name="user_dob"
+                                    max="2015-12-31" required>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="user_email"
+                                placeholder="name@example.com"
+                                autocomplete="email" required>
+                        </div>
+
+                        <div class="form-field">
+                            <span class="field-label">Gender *</span>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" id="male" name="gender" value="male" required>
+                                    <span>Male</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" id="female" name="gender" value="female">
+                                    <span>Female</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="language">Preferred Language *</label>
+                                <select id="language" name="user_lang" required>
+                                    <option value="" disabled selected>Select a language</option>
+                                    <option value="arabic">Arabic</option>
+                                    <option value="english">English</option>
+                                    <option value="french">French</option>
+                                </select>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="inquiry">Inquiry Type</label>
+                                <select id="inquiry" name="inquiry_type">
+                                    <option value="general">General Inquiry</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="support">Technical Support</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="user_message" rows="5"
+                                placeholder="How can we help you?" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary">Submit Message</button>
+                    </fieldset>
+                </form>
+            </article>
+        </section>
+
+        <aside class="info-aside">
+            <h2>Support</h2>
+            <p>Our team at the University of Jeddah will respond to your inquiry within 24 hours.</p>
+            <p>For urgent matters, please mark your inquiry type as "Technical Support".</p>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FridgeTrack Team — University of Jeddah</p>
+    </footer>
+
+</body>
+
+</html>

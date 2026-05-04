@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FridgeTrack - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="brand">
+            <h1>FridgeTrack</h1>
+            <p class="tagline">Track your fridge, save your food.</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="inventory.html">My Fridge</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero / Welcome Section -->
+        <section class="welcome-section">
+            <article class="welcome-text">
+                <h2>Welcome to FridgeTrack</h2>
+                <p>
+                    A smart and simple way to manage everything inside your fridge.
+                    Log your ingredients, track expiry dates, and reduce food waste — all in one place.
+                </p>
+                <div class="welcome-buttons">
+                    <a href="inventory.html" class="btn-primary">Open Inventory</a>
+                    <a href="about-us.html" class="btn-secondary">Meet the Team</a>
+                </div>
+            </article>
+
+            <aside class="welcome-preview" aria-label="Preview of inventory items">
+                <div class="preview-card">
+                    <h3>My Fridge</h3>
+                    <ul>
+                        <li class="preview-item">
+                            <span>Milk</span>
+                            <span class="badge fresh-badge">Fresh</span>
+                        </li>
+                        <li class="preview-item">
+                            <span>Eggs</span>
+                            <span class="badge expiring-badge">Expiring Soon</span>
+                        </li>
+                        <li class="preview-item">
+                            <span>Yogurt</span>
+                            <span class="badge expired-badge">Expired</span>
+                        </li>
+                        <li class="preview-item">
+                            <span>Cheese</span>
+                            <span class="badge fresh-badge">Fresh</span>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <h2>What Can It Do?</h2>
+            <p class="section-intro">Everything you need to manage your fridge smartly.</p>
+
+            <div class="feature-cards">
+
+                <article class="feature-card">
+                    <h3>Add Items</h3>
+                    <p>Log any ingredient with its name, category, quantity, and expiry date.</p>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Color-Coded Alerts</h3>
+                    <p>Items are highlighted based on how close they are to expiring.</p>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Edit and Delete</h3>
+                    <p>Update quantities or remove items that have been used without refreshing the page.</p>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Summary Dashboard</h3>
+                    <p>See how many items are fresh, expiring soon, or already expired at a glance.</p>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Database Backed</h3>
+                    <p>All data is saved to a MySQL database through a Node.js backend.</p>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Fully Responsive</h3>
+                    <p>Works on phones, tablets, and desktops of all sizes.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-section">
+            <h2>How It Works</h2>
+            <p class="section-intro">Three simple steps to get started.</p>
+
+            <div class="steps">
+
+                <article class="step">
+                    <h3>Step One</h3>
+                    <h4>Open the Inventory Page</h4>
+                    <p>Navigate to the Inventory page from the menu to see all your stored items.</p>
+                </article>
+
+                <article class="step">
+                    <h3>Step Two</h3>
+                    <h4>Add Your Items</h4>
+                    <p>Fill in the form with the ingredient name, quantity, category, and expiry date.</p>
+                </article>
+
+                <article class="step">
+                    <h3>Step Three</h3>
+                    <h4>Track and Manage</h4>
+                    <p>Watch your items update with color-coded statuses and edit or delete anytime.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <h2>Ready to Organize Your Fridge?</h2>
+            <p>Start tracking your ingredients and never let food go to waste again.</p>
+            <a href="inventory.html" class="btn-primary">Get Started</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FridgeTrack Team — University of Jeddah</p>
+    </footer>
+
+</body>
+
+</html>

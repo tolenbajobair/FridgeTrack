@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FridgeTrack - My Fridge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="brand">
+            <h1>FridgeTrack</h1>
+            <p class="tagline">Track your fridge, save your food.</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="inventory.html" class="active">My Fridge</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="inventory-page">
+
+        <section class="page-title">
+            <h2>My Fridge Inventory</h2>
+            <p class="section-intro">Manage all the items inside your fridge in one place.</p>
+        </section>
+
+        <section class="summary-cards">
+            <article class="summary-card total-card">
+                <h3>Total Items</h3>
+                <p id="totalItems">0</p>
+            </article>
+
+            <article class="summary-card fresh-card">
+                <h3>Fresh</h3>
+                <p id="freshItems">0</p>
+            </article>
+
+            <article class="summary-card expiring-card">
+                <h3>Expiring Soon</h3>
+                <p id="expiringItems">0</p>
+            </article>
+
+            <article class="summary-card expired-card">
+                <h3>Expired</h3>
+                <p id="expiredItems">0</p>
+            </article>
+        </section>
+
+        <section class="form-section">
+            <h2>Add New Item</h2>
+            <form id="inventoryForm" class="inventory-form">
+                <input type="hidden" id="editIndex">
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="itemName">Item Name</label>
+                        <input type="text" id="itemName" required minlength="2" maxlength="40"
+                            placeholder="e.g., Milk">
+                        <span class="error" id="nameError"></span>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="category">Category</label>
+                        <select id="category" required>
+                            <option value="">Select category</option>
+                            <option value="Vegetables">Vegetables</option>
+                            <option value="Fruits">Fruits</option>
+                            <option value="Dairy">Dairy</option>
+                            <option value="Meat">Meat</option>
+                            <option value="Drinks">Drinks</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <span class="error" id="categoryError"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" id="quantity" required min="1" max="100"
+                            placeholder="e.g., 2">
+                        <span class="error" id="quantityError"></span>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="unit">Unit</label>
+                        <select id="unit" required>
+                            <option value="">Select unit</option>
+                            <option value="pcs">pcs</option>
+                            <option value="kg">kg</option>
+                            <option value="g">g</option>
+                            <option value="L">L</option>
+                            <option value="ml">ml</option>
+                        </select>
+                        <span class="error" id="unitError"></span>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="expiryDate">Expiry Date</label>
+                        <input type="date" id="expiryDate" required>
+                        <span class="error" id="dateError"></span>
+                    </div>
+                </div>
+
+                <button type="submit" id="submitButton" class="btn-primary">Add Item</button>
+                <p id="statusMessage" class="status-message"></p>
+
+            </form>
+        </section>
+
+        <section class="table-section">
+            <h2>Inventory Items</h2>
+
+            <div class="table-wrapper">
+                <table class="inventory-table">
+                    <caption>List of fridge inventory items</caption>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Category</th>
+                            <th>Quantity</th>
+                            <th>Unit</th>
+                            <th>Expiry Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventoryTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FridgeTrack Team — University of Jeddah</p>
+    </footer>
+
+    <script src="JS files/inventory.js"></script>
+
+</body>
+
+</html>
