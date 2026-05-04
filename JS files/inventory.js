@@ -1,4 +1,4 @@
-const API_BASE = "http://fridgetrack-production.up.railway.app"
+const API_BASE = "https://fridgetrack-production.up.railway.app/api";
 
 const EXPIRING_THRESHOLD_DAYS = 3;
 
