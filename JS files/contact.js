@@ -1,4 +1,4 @@
-const API_BASE = "http://fridgetrack-production.up.railway.app"
+const API_BASE = "https://fridgetrack-production.up.railway.app/api";
 
 const contactForm = document.querySelector(".contact-form");
 const submitBtn = document.querySelector(".contact-form button[type='submit']");
