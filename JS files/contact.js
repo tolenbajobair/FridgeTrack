@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:3000/api";
+const API_BASE = "http://fridgetrack-production.up.railway.app"
 
 const contactForm = document.querySelector(".contact-form");
 const submitBtn = document.querySelector(".contact-form button[type='submit']");
